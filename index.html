@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Mastery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header>
+    Header
+</header>    
+<section>
+    <div class="container">
+        <div id="app">
+            <div class="cart">Cart({{ cart.length }})</div>
+            <prodcut-display :premium="premium" @add-to-cart="updateCart" @remove-cart="removeCart"></prodcut-display>
+            <!-- <prodcut-details :details="details"></prodcut-details>
+            <demo-component></demo-component> -->
+        </div>
+    </div>
+</section>
+<footer>
+    Footer
+</footer>
+
+<!-- Vue CDN -->
+<script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+
+<!-- Import App -->
+<script src="./main.js"></script>
+
+<!-- Import Components -->
+<script src="./components/ProdcutDisplay.js"></script>
+<script src="./components/ProdcutDetails.js"></script>
+<script src="./components/ReviewForm.js"></script>
+<script src="./components/ReviewList.js"></script>
+
+<!-- including main .js -->
+<script>
+    const mountedApp = app.mount('#app');
+</script>
+</body>
+</html>
